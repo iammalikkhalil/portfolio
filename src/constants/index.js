@@ -35,9 +35,9 @@ export const info = {
     firstName: "M",
     lastName: "Khalil",
     title: "Full Stack Developer",
-    description: "I am a full stack developer with a passion for creating beautiful and functional websites",
-    email: "mohamedkhalil.dev@gmail.com",
-    phone: "+1 647 999 9999",
+    description: "I specialize in crafting robust and user-friendly mobile applications using React Native, combining frontend and backend expertise to deliver seamless experiences across iOS and Android platforms.",
+    email: "iammalikkhalil@outlook.com",
+    phone: "+923042913629",
     address: "Iqbal Hall, PMAS UAAR, Rawalpindi, Pakistan",
     countryEmoji: "🇵🇰",
 }
@@ -79,18 +79,8 @@ export const skills = [
         type: "Database",
     },
     {
-        imageUrl: motion,
-        name: "Motion",
-        type: "Animation",
-    },
-    {
         imageUrl: mui,
         name: "Material-UI",
-        type: "Frontend",
-    },
-    {
-        imageUrl: nextjs,
-        name: "Next.js",
         type: "Frontend",
     },
     {
@@ -100,7 +90,7 @@ export const skills = [
     },
     {
         imageUrl: react,
-        name: "React",
+        name: "React native",
         type: "Frontend",
     },
     {
@@ -183,43 +173,36 @@ export const projects = [
     {
         iconUrl: pricewise,
         theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-        link: 'https://github.com/adrianhajdin/pricewise',
+        name: 'Pak Gold Info',
+        description: 'PakGoldInfo is a comprehensive mobile application designed to provide up-to-date information on both international and local gold rates. With a range of features tailored for both goldsmiths and end-users, GoldInfo ensures you stay informed and make well-informed decisions in the gold market.',
+        link: 'https://github.com/iammalikkhalil/GoldApp-FrontEnd.git',
     },
     {
         iconUrl: threads,
         theme: 'btn-back-green',
         name: 'Full Stack Threads Clone',
         description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: 'https://github.com/adrianhajdin/threads',
+        link: '',
     },
     {
         iconUrl: car,
         theme: 'btn-back-blue',
-        name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
-    },
-    {
-        iconUrl: snapgram,
-        theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/adrianhajdin/social_media_app',
+        name: 'AK Travels',
+        description: 'AK Travels is a web-based platform designed for efficient bus seat booking. With a user-friendly interface and robust backend functionality, AK Travels simplifies the process of reserving seats for your bus journeys.',
+        link: 'https://github.com/iammalikkhalil/AK-Travels.git',
     },
     {
         iconUrl: estate,
         theme: 'btn-back-black',
         name: 'Real-Estate Application',
         description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
+        link: '',
     },
     {
         iconUrl: summiz,
         theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
+        name: 'ProductPedia',
+        description: 'ProductPedia is a mobile application designed to provide comprehensive details about commonly used products. Whether you are curious about the company behind a product or its country of origin, ProductPedia has you covered. With a variety of search options and a barcode scanning feature, accessing product information has never been easier.',
+        link: '',
     }
 ];
