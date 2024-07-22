@@ -203,6 +203,6 @@ export const projects = [
         theme: 'btn-back-yellow',
         name: 'ProductPedia',
         description: 'ProductPedia is a mobile application designed to provide comprehensive details about commonly used products. Whether you are curious about the company behind a product or its country of origin, ProductPedia has you covered. With a variety of search options and a barcode scanning feature, accessing product information has never been easier.',
-        link: '',
+        link: 'https://github.com/iammalikkhalil/ProductPedia-Frontend.git',
     }
 ];
