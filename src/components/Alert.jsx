@@ -1,4 +1,4 @@
-const Alert = ({ type, text }) => {
+const Alert = ({ type, text, typeVisibility }) => {
   return (
     <div className="fixed top-10 left-0 right-0 flex justify-center items-center z-50">
       <div
@@ -7,13 +7,15 @@ const Alert = ({ type, text }) => {
         } items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex`}
         role="alert"
       >
-        <p
-          className={`flex rounded-full ${
-            type === "danger" ? "bg-red-500" : "bg-blue-500"
-          } uppercase px-2 py-1 text-xs font-semibold mr-3`}
-        >
-          {type === "danger" ? "Failed" : "Success"}
-        </p>
+        {typeVisibility === "visible" ? (
+          <p
+            className={`flex rounded-full ${
+              type === "danger" ? "bg-red-500" : "bg-blue-500"
+            } uppercase px-2 py-1 text-xs font-semibold mr-3`}
+          >
+            {type === "danger" ? "Failed" : "Success"}
+          </p>
+        ) : null}
         <p className="mr-2 text-left">{text}</p>
       </div>
     </div>

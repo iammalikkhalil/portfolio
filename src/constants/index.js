@@ -1,4 +1,4 @@
-import { meta, shopify, starbucks, tesla, octaloop } from "../assets/images";
+import { meta, shopify, starbucks, tesla, octaloop, sws, dev } from "../assets/images";
 import {
     car,
     contact,
@@ -29,8 +29,6 @@ import {
     instagram,
     linktree
 } from "../assets/icons";
-
-
 export const info = {
     firstName: "M",
     lastName: "Khalil",
@@ -38,7 +36,7 @@ export const info = {
     description: "I specialize in crafting robust and user-friendly mobile applications using React Native, combining frontend and backend expertise to deliver seamless experiences across iOS and Android platforms.",
     email: "iammalikkhalil@outlook.com",
     phone: "+923042913629",
-    address: "Iqbal Hall, PMAS UAAR, Rawalpindi, Pakistan",
+    address: "Rawalpindi, Pakistan",
     countryEmoji: "🇵🇰",
 }
 
@@ -117,11 +115,37 @@ export const skills = [
 
 export const experiences = [
     {
-        title: "Mobile App Intern",
+        title: "Mobile App Developer",
+        company_name: "Freelance",
+        icon: dev,
+        iconBg: "#3695e5",
+        date: "Feb 2024 - contd.",
+        points: [
+            "Developing and maintaining mobile applications using React Native and other related technologies.",
+            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+            "Implementing responsive design and ensuring cross-platform compatibility.",
+            "Participating in code reviews and getting constructive feedback to other developers.",
+        ],
+    },
+    {
+        title: "Mobile App Dev",
         company_name: "Octaloop Technologies",
         icon: octaloop,
         iconBg: "#ffffff",
-        date: "Jul 2024 - contd.",
+        date: "June 2024 - Sep 2024",
+        points: [
+            "Developing and maintaining mobile applications using React Native and other related technologies.",
+            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+            "Implementing responsive design and ensuring cross-platform compatibility.",
+            "Participating in code reviews and getting constructive feedback to other developers.",
+        ],
+    },
+    {
+        title: "Full Stack Dev",
+        company_name: "SoftWise Sol",
+        icon: sws,
+        iconBg: "#000000",
+        date: "Apr 2023 - June 2024",
         points: [
             "Developing and maintaining mobile applications using React Native and other related technologies.",
             "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -155,7 +179,7 @@ export const socialLinks = [
     {
         name: 'Instagram',
         iconUrl: instagram,
-        link: 'https://www.instagram.co/in/iammalikkhalil',
+        link: 'https://www.instagram.com/iammalikkhalil',
     },
     {
         name: 'Youtube',
@@ -180,9 +204,16 @@ export const projects = [
     {
         iconUrl: threads,
         theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: '',
+        name: 'SuperVet App',
+        description: 'SuperVet App is a mobile platform designed for comic enthusiasts to explore detailed character profiles, read engaging stories, and earn points to unlock exclusive content. Users can download their favorite characters, build teams, and connect with others for an interactive experience. The app combines entertainment with gamification, offering a seamless and visually appealing interface.',
+        link: 'https://github.com/iammalikkhalil/SuperVet.git',
+    },
+    {
+        iconUrl: summiz,
+        theme: 'btn-back-yellow',
+        name: 'ProductPedia',
+        description: 'ProductPedia is a mobile application designed to provide comprehensive details about commonly used products. Whether you are curious about the company behind a product or its country of origin, ProductPedia has you covered. With a variety of search options and a barcode scanning feature, accessing product information has never been easier.',
+        link: 'https://github.com/iammalikkhalil/ProductPedia-Frontend.git',
     },
     {
         iconUrl: car,
@@ -194,15 +225,22 @@ export const projects = [
     {
         iconUrl: estate,
         theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: '',
+        name: 'Smart Door Lock',
+        description: `Smart Door Lock is a full-stack project where users scan their fingerprints using a microcontroller, which sends the data to a server. The server fetches the fingerprint details and sends them to a mobile app, where an admin reviews the request. Based on the admin's response, the door is either unlocked or remains secure.`,
+        link: 'https://github.com/iammalikkhalil/IoTApp-Frontend.git',
     },
     {
-        iconUrl: summiz,
-        theme: 'btn-back-yellow',
-        name: 'ProductPedia',
-        description: 'ProductPedia is a mobile application designed to provide comprehensive details about commonly used products. Whether you are curious about the company behind a product or its country of origin, ProductPedia has you covered. With a variety of search options and a barcode scanning feature, accessing product information has never been easier.',
-        link: 'https://github.com/iammalikkhalil/ProductPedia-Frontend.git',
-    }
+        iconUrl: pricewise,
+        theme: 'btn-back-red',
+        name: 'Login System with Authentication',
+        description: 'This project is a comprehensive and secure login system with a beautiful user interface (UI) tailored for mobile devices. It includes features such as user registration, login, OTP verification, password reset, and more. The system is designed to provide a smooth and user-friendly experience while ensuring high levels of security.',
+        link: 'https://github.com/iammalikkhalil/login-system.git',
+    },
+    {
+        iconUrl: estate,
+        theme: 'btn-back-green',
+        name: 'Magic Notes',
+        description: 'Magic Notes is a simple, fully responsive note-taking web application that allows users to add, update, delete, and mark notes as important. The application uses localStorage to save the notes in the browser.',
+        link: 'https://github.com/iammalikkhalil/Magic-Notes.git',
+    },
 ];

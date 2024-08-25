@@ -30,6 +30,10 @@ export function Island({
 
   // Use a ref for the last mouse x position
   const lastX = useRef(0);
+
+  // Use a ref for the last mouse y position
+  const lastY = useRef(0);
+
   // Use a ref for rotation speed
   const rotationSpeed = useRef(0);
   // Define a damping factor to control rotation damping
@@ -46,6 +50,12 @@ export function Island({
 
     // Store the current clientX position for reference
     lastX.current = clientX;
+
+    // Calculate the clientY based on whether it's a touch event or a mouse event
+    const clientY = event.touches ? event.touches[0].clientY : event.clientY;
+
+    // Store the current clientY position for reference
+    lastY.current = clientY;
   };
 
   // Handle pointer (mouse or touch) up event
@@ -63,29 +73,40 @@ export function Island({
       // If rotation is enabled, calculate the change in clientX position
       const clientX = event.touches ? event.touches[0].clientX : event.clientX;
 
-      // calculate the change in the horizontal position of the mouse cursor or touch input,
-      // relative to the viewport's width
-      const delta = (clientX - lastX.current) / viewport.width;
+      // If rotation is enabled, calculate the change in clientY position
+      const clientY = event.touches ? event.touches[0].clientY : event.clientY;
 
-      // Update the island's rotation based on the mouse/touch movement
-      islandRef.current.rotation.y += delta * 0.01 * Math.PI;
+      // Calculate changes in X and Y positions
+      const deltaX = (clientX - lastX.current) / viewport.width;
+      const deltaY = (clientY - lastY.current) / viewport.height;
 
-      // Update the reference for the last clientX position
+      // Determine rotation based on the greater movement direction
+      if (Math.abs(deltaY) > Math.abs(deltaX)) {
+        // Rotate based on horizontal scroll
+        islandRef.current.rotation.y += deltaY * 0.01 * Math.PI;
+      } else {
+        // Rotate based on horizontal scroll
+        islandRef.current.rotation.y += deltaX * 0.01 * Math.PI;
+      }
+
+      // Update the references for the last client positions
       lastX.current = clientX;
+      lastY.current = clientY;
 
-      // Update the rotation speed
-      rotationSpeed.current = delta * 0.01 * Math.PI;
+      // Update the rotation speed (use the maximum delta value for more consistent rotation speed)
+      rotationSpeed.current =
+        Math.max(Math.abs(deltaX), Math.abs(deltaY)) * 0.01 * Math.PI;
     }
   };
 
   // Handle keydown events
   const handleKeyDown = (event) => {
-    if (event.key === "ArrowLeft") {
+    if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
       if (!isRotating) setIsRotating(true);
 
       islandRef.current.rotation.y += 0.005 * Math.PI;
       rotationSpeed.current = 0.007;
-    } else if (event.key === "ArrowRight") {
+    } else if (event.key === "ArrowRight" || event.key === "ArrowDown") {
       if (!isRotating) setIsRotating(true);
 
       islandRef.current.rotation.y -= 0.005 * Math.PI;
@@ -95,7 +116,12 @@ export function Island({
 
   // Handle keyup events
   const handleKeyUp = (event) => {
-    if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+    if (
+      event.key === "ArrowLeft" ||
+      event.key === "ArrowRight" ||
+      event.key === "ArrowUp" ||
+      event.key === "ArrowDown"
+    ) {
       setIsRotating(false);
     }
   };
@@ -105,30 +131,50 @@ export function Island({
     e.stopPropagation();
     e.preventDefault();
     setIsRotating(true);
-  
+
     const clientX = e.touches ? e.touches[0].clientX : e.clientX;
     lastX.current = clientX;
-  }
-  
+
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+    lastY.current = clientY;
+  };
+
   const handleTouchEnd = (e) => {
     e.stopPropagation();
     e.preventDefault();
     setIsRotating(false);
-  }
-  
+  };
+
   const handleTouchMove = (e) => {
     e.stopPropagation();
     e.preventDefault();
-  
+
     if (isRotating) {
       const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-      const delta = (clientX - lastX.current) / viewport.width;
-  
-      islandRef.current.rotation.y += delta * 0.01 * Math.PI;
+      const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+
+      // Calculate changes in X and Y positions
+      const deltaX = (clientX - lastX.current) / viewport.width;
+      const deltaY = (clientY - lastY.current) / viewport.height;
+
+      // Determine rotation based on the greater movement direction
+      if (Math.abs(deltaY) > Math.abs(deltaX)) {
+        // Rotate based on horizontal scroll
+        islandRef.current.rotation.y += deltaY * 0.01 * Math.PI;
+      } else {
+        // Rotate based on horizontal scroll
+        islandRef.current.rotation.y += deltaX * 0.01 * Math.PI;
+      }
+
+      // Update the references for the last client positions
       lastX.current = clientX;
-      rotationSpeed.current = delta * 0.01 * Math.PI;
+      lastY.current = clientY;
+
+      // Update the rotation speed (use the maximum delta value for more consistent rotation speed)
+      rotationSpeed.current =
+        Math.max(Math.abs(deltaX), Math.abs(deltaY)) * 0.01 * Math.PI;
     }
-  }
+  };
 
   useEffect(() => {
     // Add event listeners for pointer and keyboard events
