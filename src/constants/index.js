@@ -121,10 +121,10 @@ export const experiences = [
         iconBg: "#3695e5",
         date: "Feb 2024 - contd.",
         points: [
-            "Developing and maintaining mobile applications using React Native and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-platform compatibility.",
-            "Participating in code reviews and getting constructive feedback to other developers.",
+            "Designed and developed end-to-end mobile applications with a focus on React Native for dynamic user experiences.",
+            "Implemented robust backend systems using Node.js and MongoDB to support scalable and secure applications.",
+            "Customized mobile app features to meet specific client requirements, optimizing for performance and user engagement.",
+            "Integrated third-party APIs and services to enhance application functionality and streamline user interactions.",
         ],
     },
     {
@@ -134,10 +134,10 @@ export const experiences = [
         iconBg: "#ffffff",
         date: "June 2024 - Sep 2024",
         points: [
-            "Developing and maintaining mobile applications using React Native and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-platform compatibility.",
-            "Participating in code reviews and getting constructive feedback to other developers.",
+            "Focused on developing highly responsive and intuitive user interfaces for mobile applications using React Native.",
+            "Collaborated with UI/UX designers to implement visually appealing and user-friendly designs.",
+            "Worked closely with the backend team to integrate RESTful APIs, ensuring seamless data flow and synchronization.",
+            "Enhanced app stability and performance through rigorous testing, debugging, and optimization techniques.",
         ],
     },
     {
@@ -147,13 +147,14 @@ export const experiences = [
         iconBg: "#000000",
         date: "Apr 2023 - June 2024",
         points: [
-            "Developing and maintaining mobile applications using React Native and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-platform compatibility.",
-            "Participating in code reviews and getting constructive feedback to other developers.",
+            "Led the development of full-stack solutions, utilizing React Native for the frontend and Node.js for backend services.",
+            "Architected and implemented RESTful APIs, facilitating efficient communication between frontend and backend.",
+            "Managed database interactions using MongoDB, ensuring data integrity and security for web and mobile applications.",
+            "Collaborated on projects that required seamless integration of front-end and back-end components, resulting in robust, user-centered solutions.",
         ],
     },
 ];
+
 
 export const socialLinks = [
     {
