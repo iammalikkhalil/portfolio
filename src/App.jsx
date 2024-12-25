@@ -2,6 +2,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import { Footer, Navbar } from "./components";
 import { About, Contact, Home, Projects, Blog } from "./pages";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
           />
         </Routes>
       </Router>
+      <SpeedInsights />
     </main>
   );
 };
