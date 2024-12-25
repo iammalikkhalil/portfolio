@@ -1,4 +1,4 @@
-import hero from "./hero.jpg";
+import hero from "./hero.png";
 import meta from "./meta.png";
 import shopify from "./shopify.png";
 import starbucks from "./starbucks.png";
