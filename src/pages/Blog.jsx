@@ -47,9 +47,10 @@ const Blog = () => {
 
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
         <p>
-          Discover my latest insights and stories on Medium, covering a range of
-          topics designed to inform, inspire, and engage. Explore my articles
-          below!
+          Here are my latest 10 blogs, carefully curated to offer valuable
+          insights and stories across a variety of topics. If you're interested
+          in exploring more, feel free to visit my Medium profile for a complete
+          collection!
         </p>
       </div>
 
