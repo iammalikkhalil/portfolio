@@ -20,8 +20,6 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.17.0",
     "react-vertical-timeline-component": "^3.6.0",
-    "rss-parser": "^3.13.0",
-    "rss-to-json": "^2.1.1",
     "three": "^0.157.0"
   },
   "devDependencies": {
